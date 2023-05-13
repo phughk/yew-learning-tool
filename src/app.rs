@@ -1,3 +1,4 @@
+use yew_router::prelude::*;
 use yew::prelude::*;
 use crate::banner::Banner;
 use crate::router::Router;
@@ -6,8 +7,10 @@ use crate::router::Router;
 pub fn app() -> Html {
     html! {
         <main>
-            <Banner/>
-            <Router/>
+            <BrowserRouter>
+                <Banner/>
+                <Router/>
+            </BrowserRouter>
         </main>
     }
 }

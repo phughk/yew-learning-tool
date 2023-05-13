@@ -6,7 +6,7 @@ use crate::datasets::Datasets;
 use crate::repository::Repository;
 
 #[derive(Clone, Routable, PartialEq)]
-enum Route {
+pub enum Route {
     #[at("/")]
     Home,
     #[at("/profile")]
@@ -36,8 +36,6 @@ fn switch(routes: Route) -> Html {
 #[function_component(Router)]
 pub fn router() -> Html {
     html! {
-        <BrowserRouter>
             <Switch<Route> render={switch} /> // <- must be child of <BrowserRouter>
-        </BrowserRouter>
     }
 }

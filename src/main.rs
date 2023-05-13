@@ -6,6 +6,7 @@ mod datasets;
 mod repository;
 mod router;
 mod not_found;
+mod dataset;
 
 use app::App;
 
