@@ -11,7 +11,7 @@ pub fn datasets() -> Html {
     html! {
         <div class="datasets">
             <p>{"Datasets page"}</p>
-            <ul class="item-list">
+            <ul>
                 { items.iter().map(|props| {
                     html!{<Dataset/>}
                 }).collect::<Html>() }
