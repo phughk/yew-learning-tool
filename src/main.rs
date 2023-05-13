@@ -1,4 +1,5 @@
 mod app;
+mod banner;
 
 use app::App;
 

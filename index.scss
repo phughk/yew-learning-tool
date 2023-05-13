@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.banner a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
 }
