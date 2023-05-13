@@ -4,6 +4,8 @@ mod profile;
 mod about;
 mod datasets;
 mod repository;
+mod router;
+mod not_found;
 
 use app::App;
 
