@@ -7,3 +7,6 @@ config:
 serve:
 	cargo build
 	trunk serve
+
+release:
+	trunk build --release
