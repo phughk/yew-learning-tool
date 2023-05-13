@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub fn datasets() -> Html {
     html! {
         <div class="datasets">
-            <p>{"Datasets page"}
+            <p>{"Datasets page"}</p>
         </div>
     }
 }

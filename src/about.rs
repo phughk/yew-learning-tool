@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub fn about() -> Html {
     html! {
         <div class="about">
-            <p>{"about page"}
+            <p>{"about page"}</p>
         </div>
     }
 }

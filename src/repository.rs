@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub fn repository() -> Html {
     html! {
         <div class="repository">
-            <p>{"Repository page"}
+            <p>{"Repository page"}</p>
         </div>
     }
 }

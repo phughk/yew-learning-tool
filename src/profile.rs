@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub fn profile() -> Html {
     html! {
         <div class="profile">
-            <p>{"Profile page"}
+            <p>{"Profile page"}</p>
         </div>
     }
 }
