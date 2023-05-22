@@ -3,7 +3,7 @@ use yew::prelude::*;
 #[function_component(About)]
 pub fn about() -> Html {
     html! {
-        <div class="about">
+        <div class={classes!("about", "text-base")}>
             <p>{"This tool is used to learn by quizzing"}</p>
             <p>
                 {"The frontend is written in Rust WebAssembly using"}
