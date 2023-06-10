@@ -37,9 +37,16 @@ pub struct Props {
 #[function_component(Dataset)]
 pub fn dataset(props: &Props) -> Html {
     // Listeners
-    let event_listener: Callback<events::MouseEvent> = Callback::from(|e: events::MouseEvent| {
+    let click_name = props.name.clone();
+    let click_event_listener: Callback<events::MouseEvent> = Callback::from(move |e: events::MouseEvent| {
         // do stuff
-        let s = format!("Testing - {:?}", e);
+        let s = format!("Click - {} - {:?}", click_name, e);
+        info!("{}", s)
+    });
+    let hover_name = props.name.clone();
+    let event_listener: Callback<events::MouseEvent> = Callback::from(move |e: events::MouseEvent| {
+        // do stuff
+        let s = format!("Mouseover - {} - {:?}", hover_name, e);
         info!("{}", s)
     });
     // Conditionals
@@ -48,8 +55,9 @@ pub fn dataset(props: &Props) -> Html {
         Focused::Hover => "shadow-m",
         _ => "shadow-sm"
     };
+    info!("Creating component");
     html! {
-        <div class={classes!("bg-white", "rounded-lg", {{shadow}}, "p-4") } onclick={event_listener.clone()} onmouseover={event_listener}>
+        <div class={classes!("bg-white", "rounded-lg", {{shadow}}, "p-4") } onclick={click_event_listener} onmouseover={event_listener}>
           <h2 class={classes!("text-2xl", "font-bold", "text-accent", "mb-2")}>{&props.name}</h2>
           <p class={classes!("text-gray-600", "mb-4")}>{"Tags: "}{for props.tags.iter()}</p>
           <p class={classes!("text-gray-600", "mb-4")}>{"Description: "}{&props.description}</p>
